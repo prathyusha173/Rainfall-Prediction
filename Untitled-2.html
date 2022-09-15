@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0">
+    </head>
+    <body>
+        <div>
+            <form action="{{url_for('predict')}}" method="post">
+                <h2>RainFall prediction</h2>
+                <h3>Subdivision</h3>
+                <input type="text" id="first" name="division">
+                <h3>Month1</h3><br><input id="second" name="m1">
+                <h3>Month2</h3><br><input id="third" name="m2">
+                <h3>Month3</h3><br><input name="m3" id="fourth">
+                <button id="sub" type="submit">Calculate Rainfall</button>
+            </form>
+
+            <br><br><h3>{{ prediction_text }}</h3>
+        </div>
+    </body>
+</html>
